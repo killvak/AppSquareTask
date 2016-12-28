@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffh-zK-0re" id="scW-Cu-nqX">
-                                            <frame key="frameInset" width="375" height="175"/>
+                                            <frame key="frameInset" width="375" height="176"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-tL-hhG">
@@ -103,7 +103,7 @@
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="xFF-Rm-3S3" secondAttribute="trailing" constant="3" id="2yH-Ev-aof"/>
                                                         <constraint firstItem="xFF-Rm-3S3" firstAttribute="leading" secondItem="2ew-tL-hhG" secondAttribute="leading" constant="4" id="8gq-AY-pCE"/>
@@ -122,8 +122,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="containerView" destination="2ew-tL-hhG" id="smy-zd-lpf"/>
+                                            <outlet property="descLbl" destination="8I5-FG-eyb" id="Gt6-YE-YeZ"/>
                                             <outlet property="descriptionLbl" destination="RNV-BR-Z0Q" id="BJs-gO-9bg"/>
+                                            <outlet property="repoLbl" destination="Oc1-yT-3Ee" id="iVS-pa-u7g"/>
                                             <outlet property="repoNameDataLBl" destination="SNT-nM-xx0" id="Mho-gk-RMX"/>
+                                            <outlet property="userLbl" destination="kZr-Ve-Pbc" id="fZt-d2-znf"/>
                                             <outlet property="usernameDataLbl" destination="m3N-hD-Z8o" id="WpB-zI-Dtq"/>
                                         </connections>
                                     </tableViewCell>

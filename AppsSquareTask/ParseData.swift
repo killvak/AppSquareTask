@@ -35,9 +35,7 @@ class  ParseData {
                         
                     }
                     let json = JSON(data: cachedURLResponse.data) // SwiftyJSON
-                    
                   let data =  self.getJsonData(json: json)
-                    
                     completed(data)
                     break
                 case .failure(_) :

@@ -15,8 +15,21 @@ class RepoVars {
     private var _fullName : String?
     var repoOwner : RepoOwner?
     private var _description : String?
+    private  var _fork  : Bool?
+    private var _htmlUrl : String?
+
     
-    private var id : Int {
+    var fork : Bool {
+        guard let fork_ = _fork else { return true }
+        return fork_
+    }
+    
+    var htmlUrl : String {
+        guard let htmlUrl_ = _htmlUrl else { return "" }
+        return htmlUrl_
+    }
+    
+     var id : Int {
         guard let id_ = _id else { return 0 }
         return id_
     }
@@ -25,6 +38,7 @@ class RepoVars {
         guard let name_ = _name else { return "" }
         return name_
     }
+    
     
     var fullName : String {
         guard let fullName_ = _fullName else { return "" }
@@ -37,12 +51,14 @@ class RepoVars {
     }
     
     init(jsonData : JSON) {
-        
         self._name = jsonData["name"].stringValue
         self._fullName = jsonData["full_name"].stringValue
         self._id = jsonData["id"].intValue
         self._description = jsonData["description"].stringValue
+        self._fork = jsonData["fork"].boolValue
+        self._htmlUrl = jsonData["html_url"].stringValue
     }
+    
 }
 
 
@@ -52,13 +68,22 @@ class RepoOwner {
     var _url : String?
     var _reposUrl : String?
     var _language : String?
-    var _fork  : Bool?
+    private var _htmlUrl : String?
+    
+
+    
+    var htmlUrl : String {
+        guard let htmlUrl_ = _htmlUrl else { return "" }
+        return htmlUrl_
+    }
+    
     init(data:JSON) {
         self._login = data["login"].stringValue
         self._url = data["url"].stringValue
         self._reposUrl = data["repos_url"].stringValue
         self._language = data["language"].stringValue
-        self._fork = data["fork"].boolValue
+        self._htmlUrl = data["html_url"].stringValue
+
     }
     
     

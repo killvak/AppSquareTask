@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7128F2A41E14059100FF2BCE /* RepoVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2A31E14059100FF2BCE /* RepoVars.swift */; };
-		7128F2A61E14172100FF2BCE /* VCTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2A51E14172100FF2BCE /* VCTableDataSource.swift */; };
-		7128F2A81E14172E00FF2BCE /* VCTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2A71E14172E00FF2BCE /* VCTableDelegate.swift */; };
+		7128F2A61E14172100FF2BCE /* VCTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2A51E14172100FF2BCE /* VCTableDelegate.swift */; };
+		7128F2A81E14172E00FF2BCE /* VCTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2A71E14172E00FF2BCE /* VCTableDataSource.swift */; };
 		7128F2AA1E141BC900FF2BCE /* VCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2A91E141BC900FF2BCE /* VCTableViewCell.swift */; };
 		7128F2AC1E14240700FF2BCE /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2AB1E14240700FF2BCE /* MaterialView.swift */; };
 		712B7B471E13E6AA00BAB3AB /* AASquaresLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B7B461E13E6AA00BAB3AB /* AASquaresLoading.swift */; };
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		37717086111D46D87C7D9F68 /* Pods-AppsSquareTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsSquareTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsSquareTask/Pods-AppsSquareTask.debug.xcconfig"; sourceTree = "<group>"; };
 		7128F2A31E14059100FF2BCE /* RepoVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoVars.swift; sourceTree = "<group>"; };
-		7128F2A51E14172100FF2BCE /* VCTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableDataSource.swift; sourceTree = "<group>"; };
-		7128F2A71E14172E00FF2BCE /* VCTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableDelegate.swift; sourceTree = "<group>"; };
+		7128F2A51E14172100FF2BCE /* VCTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableDelegate.swift; sourceTree = "<group>"; };
+		7128F2A71E14172E00FF2BCE /* VCTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableDataSource.swift; sourceTree = "<group>"; };
 		7128F2A91E141BC900FF2BCE /* VCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableViewCell.swift; sourceTree = "<group>"; };
 		7128F2AB1E14240700FF2BCE /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		712B7B461E13E6AA00BAB3AB /* AASquaresLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AASquaresLoading.swift; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				71546D581E13E22D006D80FB /* ViewController.swift */,
-				7128F2A71E14172E00FF2BCE /* VCTableDelegate.swift */,
-				7128F2A51E14172100FF2BCE /* VCTableDataSource.swift */,
+				7128F2A71E14172E00FF2BCE /* VCTableDataSource.swift */,
+				7128F2A51E14172100FF2BCE /* VCTableDelegate.swift */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -272,8 +272,8 @@
 				7128F2A41E14059100FF2BCE /* RepoVars.swift in Sources */,
 				71546D591E13E22D006D80FB /* ViewController.swift in Sources */,
 				7128F2AA1E141BC900FF2BCE /* VCTableViewCell.swift in Sources */,
-				7128F2A61E14172100FF2BCE /* VCTableDataSource.swift in Sources */,
-				7128F2A81E14172E00FF2BCE /* VCTableDelegate.swift in Sources */,
+				7128F2A61E14172100FF2BCE /* VCTableDelegate.swift in Sources */,
+				7128F2A81E14172E00FF2BCE /* VCTableDataSource.swift in Sources */,
 				712B7B471E13E6AA00BAB3AB /* AASquaresLoading.swift in Sources */,
 				7128F2AC1E14240700FF2BCE /* MaterialView.swift in Sources */,
 				71546D571E13E22D006D80FB /* AppDelegate.swift in Sources */,

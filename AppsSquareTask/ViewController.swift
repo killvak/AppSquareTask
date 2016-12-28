@@ -10,12 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //@outLets
+    @IBOutlet weak var tableView: UITableView!
+    
+    //@endOutLets
+    
+    //@vars
     let parseJson = ParseData()
+    var repoData = [RepoVars]()
+    //@endVars
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        parseJson.GetData {
-            print("Done with Getting the Data")
+//        tableView.register(cellClass, forCellReuseIdentifier: cellID)
+        tableView.delegate = self
+        tableView.dataSource = self
+     
+        parseJson.GetData { (data) in
+            
+            guard let data = data else { return }
+            self.repoData = data
+            self.tableView.reloadData()
         }
     }
 

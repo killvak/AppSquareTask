@@ -14,7 +14,7 @@ class  ParseData {
     
     var repoVars : [RepoVars]?
     
-    func GetData(completed : @escaping () ->()) {
+    func GetData(completed : @escaping ([RepoVars]?) ->()) {
         
         let request = alamoRequest(query_url: BASE_URL)
         Alamofire.request(request).responseJSON { (response) in
@@ -36,22 +36,22 @@ class  ParseData {
                     }
                     let json = JSON(data: cachedURLResponse.data) // SwiftyJSON
                     
-                    print(self.getJsonData(json: json))
+                  let data =  self.getJsonData(json: json)
                     
-                    completed()
+                    completed(data)
                     break
                 case .failure(_) :
                     print("that is fail i n getting the data Mate : %@",response.result.error)
                     if let urlRequest = request.urlRequest {
                         let x = URLCache.shared.cachedResponse(for: urlRequest)
                         guard let cache = x else {
-                            completed()
+                            completed([])
                             return
                         }
                         let json = JSON(data: cache.data) // SwiftyJSON
                         //
-                        print(json)
-                        completed()
+                        let data =  self.getJsonData(json: json)
+                        completed(data)
                     }
                     
                     break

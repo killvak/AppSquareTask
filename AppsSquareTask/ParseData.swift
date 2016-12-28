@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class  ParseData {
     
+    var repoVars : [RepoVars]?
     
     func GetData(completed : @escaping () ->()) {
         
@@ -34,8 +35,8 @@ class  ParseData {
                         
                     }
                     let json = JSON(data: cachedURLResponse.data) // SwiftyJSON
-                    print(json)
-
+                    
+                    print(self.getJsonData(json: json))
                     
                     completed()
                     break
@@ -67,10 +68,22 @@ class  ParseData {
         
       
         //Request with caching policy
-        var request = URLRequest(url: URL(string: urlAddressEscaped!)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 3)
+        let request = URLRequest(url: URL(string: urlAddressEscaped!)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 15)
         return  request
     }
     
+    func getJsonData(json : JSON) -> [RepoVars] {
+        var repoVars = [RepoVars]()
+        for i in 0..<json.count {
+            let data = json[i]
+            let repoVarsData = RepoVars(jsonData: data)
+            let products = data["owner"]
+            let repoOwner = RepoOwner(data: products)
+            repoVarsData.repoOwner = repoOwner
+            repoVars.append(repoVarsData)
+        }
+        return repoVars
+    }
     
     
     

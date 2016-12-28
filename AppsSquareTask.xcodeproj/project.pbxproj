@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7128F2A41E14059100FF2BCE /* RepoVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128F2A31E14059100FF2BCE /* RepoVars.swift */; };
 		712B7B471E13E6AA00BAB3AB /* AASquaresLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B7B461E13E6AA00BAB3AB /* AASquaresLoading.swift */; };
 		712B7B4C1E13E99300BAB3AB /* ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B7B4B1E13E99300BAB3AB /* ParseData.swift */; };
 		712B7B4E1E13FC0F00BAB3AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B7B4D1E13FC0F00BAB3AB /* Constants.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		37717086111D46D87C7D9F68 /* Pods-AppsSquareTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsSquareTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsSquareTask/Pods-AppsSquareTask.debug.xcconfig"; sourceTree = "<group>"; };
+		7128F2A31E14059100FF2BCE /* RepoVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoVars.swift; sourceTree = "<group>"; };
 		712B7B461E13E6AA00BAB3AB /* AASquaresLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AASquaresLoading.swift; sourceTree = "<group>"; };
 		712B7B4B1E13E99300BAB3AB /* ParseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseData.swift; sourceTree = "<group>"; };
 		712B7B4D1E13FC0F00BAB3AB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				712B7B4D1E13FC0F00BAB3AB /* Constants.swift */,
 				712B7B4B1E13E99300BAB3AB /* ParseData.swift */,
+				7128F2A31E14059100FF2BCE /* RepoVars.swift */,
 			);
 			name = M;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				712B7B4E1E13FC0F00BAB3AB /* Constants.swift in Sources */,
+				7128F2A41E14059100FF2BCE /* RepoVars.swift in Sources */,
 				71546D591E13E22D006D80FB /* ViewController.swift in Sources */,
 				712B7B471E13E6AA00BAB3AB /* AASquaresLoading.swift in Sources */,
 				71546D571E13E22D006D80FB /* AppDelegate.swift in Sources */,

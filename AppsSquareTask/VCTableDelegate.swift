@@ -22,4 +22,10 @@ extension ViewController : UITableViewDelegate {
         self.pageingTableView()
         }
     }
+    
+    func pageingTableView() {
+        if self.numberOfItemPerPage < repoFullData.count {
+            self.itemPerPage(returnedData: repoFullData)
+        }
+    }
 }

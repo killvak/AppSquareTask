@@ -8,10 +8,12 @@
 
 import UIKit
 import SCLAlertView
-class ViewController: UIViewController , UIGestureRecognizerDelegate {
+class ViewController: UIViewController  {
     
     //@outLets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var uAreOfflineLbl: UILabel!
+    @IBOutlet weak var uAreOffline2ndLbl: UILabel!
     
     //@endOutLets
     
@@ -19,7 +21,7 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate {
     let parseJson = ParseData()
     var repoData = [RepoVars]()
     var repoFullData = [RepoVars]()
-
+    
     var numberOfItemPerPage = 0
     //@endVars
     
@@ -31,65 +33,39 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate {
         tableView.dataSource = self
         self.view.squareLoading.start(0.0)
         getData()
-        addLongtapGesture()
-    }
-    
-    func addLongtapGesture() {
-        let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongPress(longPressGesture:)) )
-        let swipe : UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeGesture(swipeGestureRecognizer:)) )
-        longPressGesture.minimumPressDuration = 1.0 // 1 second press
-        longPressGesture.delegate = self
-        self.tableView.addGestureRecognizer(longPressGesture)
+        addTapGestures()
     }
     
     
-    func swipeGesture(swipeGestureRecognizer : UISwipeGestureRecognizer) {
-        print("swiped")
-        self.view.squareLoading.start(0.0)
-        URLCache.shared.removeAllCachedResponses()
-        getData()
-    }
-    func handleLongPress(longPressGesture:UILongPressGestureRecognizer) {
-        
-        let p = longPressGesture.location(in: self.tableView)
-        let indexPath = self.tableView.indexPathForRow(at: p)
-        
-        if indexPath == nil {
-            print("Long press on table view, not row.")
-        }
-        else if (longPressGesture.state == UIGestureRecognizerState.began) {
-            print("Long press on row, at \(indexPath!.row)")
-            if let index = indexPath?.row , index < repoFullData.count {
-            self.showAlert(index: index)
-            }
-        }
-        
-    }
-    
+   
     func showAlert(index:Int) {
         let alertView = SCLAlertView()
         alertView.addButton("Repository") {
             print("1st button tapped")
-             let urlString = self.repoFullData[index].htmlUrl
+            let urlString = self.repoFullData[index].htmlUrl
             guard let url = URL(string: urlString) else { return }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            print("saddsadsa %@",url)
+         
+            self.openBrowser(url :url)
         }
         alertView.addButton("Owner") {
             print("Second button tapped")
             guard   let urlString = self.repoFullData[index].repoOwner?.htmlUrl ,  let url = URL(string: urlString) else { return }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            print("saddsadsa %@",url)
+            self.openBrowser(url :url)
         }
+        
         alertView.showSuccess("Select Destination", subTitle: "Go To")
         
     }
     
-    func pageingTableView() {
-        if self.numberOfItemPerPage < repoFullData.count {
-            self.itemPerPage(returnedData: repoFullData)
+    func openBrowser(url :URL) {
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
         }
+        
     }
+    
     
     func itemPerPage(returnedData : [RepoVars]) {
         self.numberOfItemPerPage += 10
@@ -105,13 +81,24 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate {
     func getData() {
         
         parseJson.GetData { (data) in
-
+            
             guard let returnedData = data else { return }
             self.repoFullData = returnedData
             
-           self.itemPerPage(returnedData: returnedData)
+            self.itemPerPage(returnedData: returnedData)
+            if self.repoFullData.count < 1 {
+                self.uAreOfflineLbl.isHidden = false
+                self.uAreOffline2ndLbl.isHidden = false
+                self.tableView.isHidden = true
+                self.view.backgroundColor = UIColor.white
+            }else {
+                self.uAreOfflineLbl.isHidden = true
+                self.uAreOffline2ndLbl.isHidden = true
+                self.tableView.isHidden = false
+                self.view.backgroundColor = UIColor.lightGray
+            }
             self.view.squareLoading.stop(0.0)
-
+            
         }
     }
 }

@@ -20,6 +20,7 @@
 		71546D5C1E13E22D006D80FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71546D5A1E13E22D006D80FB /* Main.storyboard */; };
 		71546D5E1E13E22D006D80FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71546D5D1E13E22D006D80FB /* Assets.xcassets */; };
 		71546D611E13E22D006D80FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71546D5F1E13E22D006D80FB /* LaunchScreen.storyboard */; };
+		716923021E147CB200C95896 /* VCTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716923011E147CB200C95896 /* VCTapGesture.swift */; };
 		BCE0EDEDB730D999709F7ADA /* Pods_AppsSquareTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF806D3E009B52D5D97B7499 /* Pods_AppsSquareTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		71546D5D1E13E22D006D80FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71546D601E13E22D006D80FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71546D621E13E22D006D80FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		716923011E147CB200C95896 /* VCTapGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTapGesture.swift; sourceTree = "<group>"; };
 		AF806D3E009B52D5D97B7499 /* Pods_AppsSquareTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppsSquareTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5404A0637441D1D2B9433D /* Pods-AppsSquareTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsSquareTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppsSquareTask/Pods-AppsSquareTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				71546D581E13E22D006D80FB /* ViewController.swift */,
+				716923011E147CB200C95896 /* VCTapGesture.swift */,
 				7128F2A71E14172E00FF2BCE /* VCTableDataSource.swift */,
 				7128F2A51E14172100FF2BCE /* VCTableDelegate.swift */,
 			);
@@ -179,6 +182,7 @@
 				TargetAttributes = {
 					71546D521E13E22D006D80FB = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YKSLKY2D83;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -278,6 +282,7 @@
 				7128F2AC1E14240700FF2BCE /* MaterialView.swift in Sources */,
 				71546D571E13E22D006D80FB /* AppDelegate.swift in Sources */,
 				712B7B4C1E13E99300BAB3AB /* ParseData.swift in Sources */,
+				716923021E147CB200C95896 /* VCTapGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -387,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -401,6 +406,7 @@
 			baseConfigurationReference = 37717086111D46D87C7D9F68 /* Pods-AppsSquareTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = AppsSquareTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.AppsSquareTask;
@@ -414,6 +420,7 @@
 			baseConfigurationReference = CE5404A0637441D1D2B9433D /* Pods-AppsSquareTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = AppsSquareTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.AppsSquareTask;

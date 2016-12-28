@@ -66,7 +66,7 @@ class  ParseData {
         
       
         //Request with caching policy
-        let request = URLRequest(url: URL(string: urlAddressEscaped!)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 15)
+        let request = URLRequest(url: URL(string: urlAddressEscaped!)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 2)
         return  request
     }
     

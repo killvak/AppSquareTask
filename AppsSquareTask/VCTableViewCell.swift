@@ -33,7 +33,7 @@ class VCTableViewCell: UITableViewCell {
         
 
         if  !data.fork{
-            self.containerView.backgroundColor = UIColor(displayP3Red: 134/255, green: 235/255, blue: 0/255, alpha: 1.0   )
+            self.containerView.backgroundColor = UIColor.green
             repoNameDataLBl.textColor = fontColor
             usernameDataLbl.textColor = fontColor
             descriptionLbl.textColor = fontColor

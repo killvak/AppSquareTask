@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let parseJson = ParseData()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        parseJson.GetData {
+            print("Done with Getting the Data")
+        }
     }
 
     override func didReceiveMemoryWarning() {

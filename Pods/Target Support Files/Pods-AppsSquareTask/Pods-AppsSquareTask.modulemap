@@ -1,0 +1,6 @@
+framework module Pods_AppsSquareTask {
+  umbrella header "Pods-AppsSquareTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

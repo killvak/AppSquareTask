@@ -27,3 +27,9 @@ extension ViewController : UITableViewDelegate {
         }
     }
 }
+
+extension UITableView {
+    func scrollToTop(animated: Bool) {
+        setContentOffset(CGPoint.zero, animated: animated)
+    }
+}

@@ -33,15 +33,15 @@ class VCTableViewCell: UITableViewCell {
         
 
         if  !data.fork{
-            self.containerView.backgroundColor = UIColor.green
-            repoNameDataLBl.textColor = fontColor
-            usernameDataLbl.textColor = fontColor
-            descriptionLbl.textColor = fontColor
+            self.containerView.backgroundColor =  UIColor(netHex:0xBBFFB5)
+//            repoNameDataLBl.textColor = fontColor
+//            usernameDataLbl.textColor = fontColor
+//            descriptionLbl.textColor = fontColor
         }else {
             self.containerView.backgroundColor = UIColor.white
-            repoNameDataLBl.textColor = UIColor.black
-            usernameDataLbl.textColor = UIColor.black
-            descriptionLbl.textColor = UIColor.black
+//            repoNameDataLBl.textColor = UIColor.black
+//            usernameDataLbl.textColor = UIColor.black
+//            descriptionLbl.textColor = UIColor.black
         }
     }
     

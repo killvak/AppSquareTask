@@ -9,3 +9,5 @@
 import Foundation
 
 let BASE_URL = "https://api.github.com/users/square/repos"
+
+var  userIsOffLine = true

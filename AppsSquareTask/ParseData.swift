@@ -21,6 +21,7 @@ class  ParseData {
                print(response.result)
                 switch(response.result) {
                 case .success(_):
+                    userIsOffLine = false 
                     print("Success")
                     //                        URLCache.shared.removeAllCachedResponses()
                     let cachedURLResponse = CachedURLResponse(response: response.response!, data: (response.data! as NSData) as Data, userInfo: nil, storagePolicy: .allowed)
@@ -39,6 +40,7 @@ class  ParseData {
                     completed(data)
                     break
                 case .failure(_) :
+                    userIsOffLine = true
                     print("that is fail i n getting the data Mate : %@",response.result.error)
                     if let urlRequest = request.urlRequest {
                         let x = URLCache.shared.cachedResponse(for: urlRequest)

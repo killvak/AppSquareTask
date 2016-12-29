@@ -21,7 +21,6 @@ class ViewController: UIViewController  {
     let parseJson = ParseData()
     var repoData = [RepoVars]()
     var repoFullData = [RepoVars]()
-    var offline = true
     var numberOfItemPerPage = 0
     var loadingPaging = false
     //@endVars
@@ -35,6 +34,7 @@ class ViewController: UIViewController  {
         self.view.squareLoading.start(0.0)
         getData()
         addTapGestures()
+        tableView.infiniteScrollIndicatorStyle = .white
         tableView.addInfiniteScroll { (tableView) -> Void in
             // update table view
             self.pageingTableView()
@@ -56,7 +56,7 @@ class ViewController: UIViewController  {
     
     func showAlert(index:Int) {
         let alertView = SCLAlertView()
-        if !offline {
+        if !userIsOffLine {
         alertView.addButton("Repository") {
             let urlString = self.repoFullData[index].htmlUrl
             guard let url = URL(string: urlString) else { return }
@@ -76,8 +76,11 @@ class ViewController: UIViewController  {
     
     
     func itemPerPage(returnedData : [RepoVars]) {
+        self.repoData = []
         self.numberOfItemPerPage += 10
         let i = self.numberOfItemPerPage
+        print("number of items : \(i)")
+
         let arrayData = returnedData.prefix(i)
         
         for i in arrayData {
@@ -116,7 +119,6 @@ class ViewController: UIViewController  {
         self.uAreOffline2ndLbl.isHidden = labelsBool
         self.tableView.isHidden = tableBool
         self.navigationItem.title = navText
-        self.offline = tableBool
     }
 }
 

@@ -21,8 +21,9 @@ class ViewController: UIViewController  {
     let parseJson = ParseData()
     var repoData = [RepoVars]()
     var repoFullData = [RepoVars]()
-    
+    var offline = true
     var numberOfItemPerPage = 0
+    var loadingPaging = false
     //@endVars
     
     override func viewDidLoad() {
@@ -34,36 +35,38 @@ class ViewController: UIViewController  {
         self.view.squareLoading.start(0.0)
         getData()
         addTapGestures()
-    }
-    
-    
    
-    func showAlert(index:Int) {
-        let alertView = SCLAlertView()
-        alertView.addButton("Repository") {
-            print("1st button tapped")
-            let urlString = self.repoFullData[index].htmlUrl
-            guard let url = URL(string: urlString) else { return }
-         
-            self.openBrowser(url :url)
-        }
-        alertView.addButton("Owner") {
-            print("Second button tapped")
-            guard   let urlString = self.repoFullData[index].repoOwner?.htmlUrl ,  let url = URL(string: urlString) else { return }
-            self.openBrowser(url :url)
-        }
-        
-        alertView.showSuccess("Select Destination", subTitle: "Go To")
-        
     }
     
-    func openBrowser(url :URL) {
+    
+       func openBrowser(url :URL) {
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
             UIApplication.shared.openURL(url)
         }
         
+    }
+    
+    
+    func showAlert(index:Int) {
+        let alertView = SCLAlertView()
+        if !offline {
+        alertView.addButton("Repository") {
+            let urlString = self.repoFullData[index].htmlUrl
+            guard let url = URL(string: urlString) else { return }
+            
+            self.openBrowser(url :url)
+        }
+        alertView.addButton("Owner") {
+            guard   let urlString = self.repoFullData[index].repoOwner?.htmlUrl ,  let url = URL(string: urlString) else { return }
+            self.openBrowser(url :url)
+        }
+        
+        alertView.showSuccess("Select Destination", subTitle: "Go To")
+        }else {
+            SCLAlertView().showNotice("You'r Offline", subTitle: "please check your network connection") // Notice
+        }
     }
     
     
@@ -87,19 +90,25 @@ class ViewController: UIViewController  {
             
             self.itemPerPage(returnedData: returnedData)
             if self.repoFullData.count < 1 {
-                self.uAreOfflineLbl.isHidden = false
-                self.uAreOffline2ndLbl.isHidden = false
-                self.tableView.isHidden = true
                 self.view.backgroundColor = UIColor.white
+                self.setUpOffLineModeUI(labelsBool: false, tableBool: true, navText: "Offline Mode")
             }else {
-                self.uAreOfflineLbl.isHidden = true
-                self.uAreOffline2ndLbl.isHidden = true
-                self.tableView.isHidden = false
+
                 self.view.backgroundColor = UIColor.lightGray
+                self.setUpOffLineModeUI(labelsBool: true, tableBool: false, navText: "Main Page")
+
             }
             self.view.squareLoading.stop(0.0)
             
         }
+    }
+    
+    func setUpOffLineModeUI(labelsBool:Bool,tableBool:Bool,navText:String  ) {
+        self.uAreOfflineLbl.isHidden = labelsBool
+        self.uAreOffline2ndLbl.isHidden = labelsBool
+        self.tableView.isHidden = tableBool
+        self.navigationItem.title = navText
+        self.offline = tableBool
     }
 }
 

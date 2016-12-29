@@ -58,7 +58,7 @@ public extension UIView {
 open class AASquaresLoading : UIView, AASquareLoadingInterface, CAAnimationDelegate {
   open var view : UIView = UIView()
   fileprivate(set) open var size : Float = 0
-  open var color : UIColor = UIColor(red: 0, green: 0.48, blue: 1, alpha: 1) {
+  open var color : UIColor = UIColor.green {
     didSet {
       for layer in squares {
         layer.backgroundColor = color.cgColor
@@ -178,7 +178,7 @@ open class AASquaresLoading : UIView, AASquareLoadingInterface, CAAnimationDeleg
 
     self.addSubview(view)
     if (self.backgroundColor == nil) {
-      self.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+      self.backgroundColor = UIColor.white.withAlphaComponent(1.0)
     }
     for i : Int in 0 ..< 3 {
       for j : Int in 0 ..< 3 {

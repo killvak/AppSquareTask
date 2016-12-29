@@ -33,20 +33,7 @@ extension ViewController :  UIGestureRecognizerDelegate {
         self.view.squareLoading.start(0.0)
         URLCache.shared.removeAllCachedResponses()
         getData()
-        if let swipeGesture = swipeGestureRecognizer as? UISwipeGestureRecognizer {
-            switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.right:
-                print("Swiped right")
-            case UISwipeGestureRecognizerDirection.down:
-                print("Swiped down")
-            case UISwipeGestureRecognizerDirection.left:
-                print("Swiped left")
-            case UISwipeGestureRecognizerDirection.up:
-                print("Swiped up")
-            default:
-                break
-            }
-        }
+    
     }
     
     
@@ -62,7 +49,7 @@ extension ViewController :  UIGestureRecognizerDelegate {
         }
         else if (longPressGesture.state == UIGestureRecognizerState.began) {
             print("Long press on row, at \(indexPath!.row)")
-            if let index = indexPath?.row , index < repoFullData.count {
+            if let index = indexPath?.row {
                 self.showAlert(index: index)
             }
         }

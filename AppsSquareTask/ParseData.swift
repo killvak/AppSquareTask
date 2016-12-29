@@ -61,12 +61,12 @@ class  ParseData {
     
     func alamoRequest (query_url : String ) -> URLRequest {
         
-        // escape your URL
+        
         let urlAddressEscaped = query_url.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
         
       
-        //Request with caching policy
-        let request = URLRequest(url: URL(string: urlAddressEscaped!)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 2)
+        //MARK: timeout after ... Sec
+        let request = URLRequest(url: URL(string: urlAddressEscaped!)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 8)
         return  request
     }
     

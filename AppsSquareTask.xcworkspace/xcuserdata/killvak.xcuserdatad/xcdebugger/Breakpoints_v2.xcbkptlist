@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppsSquareTask/ParseData.swift"
@@ -17,44 +17,12 @@
             endingLineNumber = "20"
             landmarkName = "GetData(completed:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AppsSquareTask.ParseData.GetData (completed : (Swift.Optional&lt;Swift.Array&lt;AppsSquareTask.RepoVars&gt;&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "AppsSquareTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/killvak/Desktop/Task/AppsSquareTask/AppsSquareTask/ParseData.swift"
-                  timestampString = "504660696.145031"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AppsSquareTask.ParseData.(GetData (completed : (Swift.Optional&lt;Swift.Array&lt;AppsSquareTask.RepoVars&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "AppsSquareTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/killvak/Desktop/Task/AppsSquareTask/AppsSquareTask/ParseData.swift"
-                  timestampString = "504660696.150056"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppsSquareTask/ParseData.swift"
@@ -70,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppsSquareTask/ParseData.swift"
@@ -102,7 +70,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppsSquareTask/ParseData.swift"
@@ -118,16 +86,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AppsSquareTask/VCTableDelegate.swift"
-            timestampString = "504659068.952565"
+            filePath = "AppsSquareTask/ViewController.swift"
+            timestampString = "504667404.715618"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "scrollViewDidScroll(_:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "showAlert(index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppsSquareTask.ViewController.showAlert (index : Swift.Int) -&gt; ()"
+                  moduleName = "AppsSquareTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/killvak/Desktop/Task/AppsSquareTask/AppsSquareTask/ViewController.swift"
+                  timestampString = "504665793.468553"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppsSquareTask.ViewController.(showAlert (index : Swift.Int) -&gt; ()).(closure #1)"
+                  moduleName = "AppsSquareTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/killvak/Desktop/Task/AppsSquareTask/AppsSquareTask/ViewController.swift"
+                  timestampString = "504665793.474829"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppsSquareTask/ViewController.swift"
+            timestampString = "504667404.715618"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "showAlert(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

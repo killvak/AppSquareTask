@@ -27,22 +27,14 @@ class ViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //        tableView.register(cellClass, forCellReuseIdentifier: cellID)
         tableView.delegate = self
         tableView.dataSource = self
         self.view.squareLoading.start(0.0)
         getData()
         addTapGestures()
-        tableView.infiniteScrollIndicatorStyle = .white
-        tableView.addInfiniteScroll { (tableView) -> Void in
-            // update table view
-            self.pageingTableView()
-            // finish infinite scroll animation
-            tableView.finishInfiniteScroll()
-        }
+      self.infiniteTableScrolling()
     }
-    
+
     
        func openBrowser(url :URL) {
         if #available(iOS 10.0, *) {

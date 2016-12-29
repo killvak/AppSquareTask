@@ -11,13 +11,14 @@ import SwiftyJSON
 
 class RepoOwner {
     
-    var _login : String?
-    var _url : String?
-    var _reposUrl : String?
-    var _language : String?
+    private var _login : String?
     private var _htmlUrl : String?
+
     
-    
+    var login : String {
+        guard let login_ = _login else { return "" }
+        return login_
+    }
     
     var htmlUrl : String {
         guard let htmlUrl_ = _htmlUrl else { return "" }
@@ -26,9 +27,6 @@ class RepoOwner {
     
     init(data:JSON) {
         self._login = data["login"].stringValue
-        self._url = data["url"].stringValue
-        self._reposUrl = data["repos_url"].stringValue
-        self._language = data["language"].stringValue
         self._htmlUrl = data["html_url"].stringValue
         
     }

@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="176"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffh-zK-0re" id="scW-Cu-nqX">
-                                            <frame key="frameInset" width="375" height="176"/>
+                                            <frame key="frameInset" width="375" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-tL-hhG">
@@ -172,7 +172,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pyD-Eb-r4F" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XmO-cR-fdo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XmO-cR-fdo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.19403405316247091" green="1" blue="0.13902436590982847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

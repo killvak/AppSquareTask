@@ -26,7 +26,7 @@ class VCTableViewCell: UITableViewCell {
     func configCell(data:RepoVars) {
         
         repoNameDataLBl.text = data.name
-        usernameDataLbl.text = data.fullName
+        usernameDataLbl.text = data.repoOwner?.login
         descriptionLbl.text = data.description
         
         let fontColor = UIColor.white

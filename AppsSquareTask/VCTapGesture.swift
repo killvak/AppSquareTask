@@ -29,7 +29,6 @@ extension ViewController :  UIGestureRecognizerDelegate {
     
     
     func respondToSwipeGesture(swipeGestureRecognizer : UIGestureRecognizer) {
-        print("swiped")
         self.view.squareLoading.start(0.0)
         URLCache.shared.removeAllCachedResponses()
         getData()
@@ -45,7 +44,6 @@ extension ViewController :  UIGestureRecognizerDelegate {
         let indexPath = self.tableView.indexPathForRow(at: p)
         
         if indexPath == nil {
-            print("Long press on table view, not row.")
         }
         else if (longPressGesture.state == UIGestureRecognizerState.began) {
             print("Long press on row, at \(indexPath!.row)")

@@ -11,11 +11,15 @@ import UIKit
 
 extension ViewController : UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func infiniteTableScrolling() {
+        tableView.infiniteScrollIndicatorStyle = .white
+        tableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            self.pageingTableView()
+            // finish infinite scroll animation
+            tableView.finishInfiniteScroll()
+        }
     }
-    
-
-
     
     func pageingTableView() {
         if self.numberOfItemPerPage < repoFullData.count {

@@ -35,7 +35,12 @@ class ViewController: UIViewController  {
         self.view.squareLoading.start(0.0)
         getData()
         addTapGestures()
-   
+        tableView.addInfiniteScroll { (tableView) -> Void in
+            // update table view
+            self.pageingTableView()
+            // finish infinite scroll animation
+            tableView.finishInfiniteScroll()
+        }
     }
     
     
@@ -82,7 +87,8 @@ class ViewController: UIViewController  {
     }
     
     func getData() {
-        
+        tableView.scrollToTop(animated: true)
+        self.numberOfItemPerPage = 0
         parseJson.GetData { (data) in
             
             guard let returnedData = data else { return }
@@ -102,6 +108,8 @@ class ViewController: UIViewController  {
             
         }
     }
+    
+
     
     func setUpOffLineModeUI(labelsBool:Bool,tableBool:Bool,navText:String  ) {
         self.uAreOfflineLbl.isHidden = labelsBool

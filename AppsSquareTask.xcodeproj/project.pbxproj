@@ -28,6 +28,7 @@
 /* Begin PBXFileReference section */
 		37717086111D46D87C7D9F68 /* Pods-AppsSquareTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppsSquareTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppsSquareTask/Pods-AppsSquareTask.debug.xcconfig"; sourceTree = "<group>"; };
 		711BE0DA1E14915C005140FE /* RepoOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
+		711BE0DC1E14A03E005140FE /* AppsSquareTask-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppsSquareTask-Bridging-Header.h"; sourceTree = "<group>"; };
 		7128F2A31E14059100FF2BCE /* RepoVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoVars.swift; sourceTree = "<group>"; };
 		7128F2A51E14172100FF2BCE /* VCTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableDelegate.swift; sourceTree = "<group>"; };
 		7128F2A71E14172E00FF2BCE /* VCTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTableDataSource.swift; sourceTree = "<group>"; };
@@ -68,9 +69,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		711BE0E01E14A062005140FE /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71546D581E13E22D006D80FB /* ViewController.swift */,
+				716923011E147CB200C95896 /* VCTapGesture.swift */,
+				7128F2A71E14172E00FF2BCE /* VCTableDataSource.swift */,
+				7128F2A51E14172100FF2BCE /* VCTableDelegate.swift */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
 		712B7B451E13E68A00BAB3AB /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				711BE0DC1E14A03E005140FE /* AppsSquareTask-Bridging-Header.h */,
 				7128F2AB1E14240700FF2BCE /* MaterialView.swift */,
 				712B7B461E13E6AA00BAB3AB /* AASquaresLoading.swift */,
 			);
@@ -99,10 +112,7 @@
 		712B7B4A1E13E95800BAB3AB /* C */ = {
 			isa = PBXGroup;
 			children = (
-				71546D581E13E22D006D80FB /* ViewController.swift */,
-				716923011E147CB200C95896 /* VCTapGesture.swift */,
-				7128F2A71E14172E00FF2BCE /* VCTableDataSource.swift */,
-				7128F2A51E14172100FF2BCE /* VCTableDelegate.swift */,
+				711BE0E01E14A062005140FE /* MainViewController */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -410,11 +420,14 @@
 			baseConfigurationReference = 37717086111D46D87C7D9F68 /* Pods-AppsSquareTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = AppsSquareTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.AppsSquareTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppsSquareTask/AppsSquareTask-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -424,11 +437,13 @@
 			baseConfigurationReference = CE5404A0637441D1D2B9433D /* Pods-AppsSquareTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = AppsSquareTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZeOwls.AppsSquareTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppsSquareTask/AppsSquareTask-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

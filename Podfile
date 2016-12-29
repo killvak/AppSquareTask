@@ -9,5 +9,6 @@ target 'AppsSquareTask' do
 
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
-pod 'SCLAlertView'
+    pod 'SCLAlertView'
+    pod 'UIScrollView-InfiniteScroll'
 end
